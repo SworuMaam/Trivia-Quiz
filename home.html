@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="main-page">
+      <h1>Welcome to the Quiz Game!</h1>
+      <button id="start-game" onclick="showDifficultySelection()">Start Game</button>
+    </div>
+
+    <div id="difficulty-selection" class="hidden">
+      <h1>Select Difficulty</h1>
+      <button onclick="startQuiz('easy')">Easy</button>
+      <button onclick="startQuiz('medium')">Medium</button>
+      <button onclick="startQuiz('hard')">Hard</button>
+    </div>
+
+    <div id="quiz-container" class="hidden">
+      <h2 id="question-number"></h2>
+      <p id="question-text"></p>
+      <div id="options-container"></div>
+      <button id="submit-answer" onclick="submitAnswer()">Submit Answer</button>
+    </div>
+
+    <div id="result-container" class="hidden">
+      <h2>Quiz Finished</h2>
+      <p id="score"></p>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
